@@ -1,0 +1,39 @@
+﻿@using MyAppDotnetCore6.Models
+
+@model Category
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<form method="post" asp-area="Admin" asp-controller="Category">
+    <div class="border p-3 mt-4">
+        <div class="row pb-3">
+            <h2 class="text-primary">Category</h2>
+            <hr />
+        </div>
+        <div class="row mb-3">
+            <label asp-for="Name">Name</label>
+            <input class="form-control" name="Name" />
+            <span asp-validation-for="Name" class="text-danger">Please enter Name</span>
+        </div>
+        <div class="row mb-3">
+            <label asp-for="DisplayOrder">Display Order</label>
+            <input name="DisplayOrder" class="form-control" />
+            <span asp-validation-for="DisplayOrder" class="text-danger">Please enter display order</span>
+        </div>
+        <button class="btn btn-primary" type="submit">Create</button>
+    </div>
+    
+<a asp-action="Index" asp-controller="Category">Back to list</a>
+</form>
+<button class="btn btn-success" onclick="location.href='@Url.Action("Index", "Category")'">Back to list</button>
+
+
+
+@section scripts{
+    @{
+        <partial name="_ValidationScriptsPartial"/>
+
+    }
+}

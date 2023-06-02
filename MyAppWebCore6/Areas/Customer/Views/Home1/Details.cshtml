@@ -1,0 +1,31 @@
+﻿@model MyAppDotnetCore6.Models.Cart
+<h1 class="py-2 px-2">Product details</h1>
+<br />
+<form method="post">
+    <div class="row">
+        <div class="col-4">
+            <img src="@Model.Product.ImageUrl" width="200" height="200" />
+            <input type="hidden" asp-for="ProductId" />
+        </div>
+        <div class="col-8 px-3">
+            <div class="row">
+                <label asp-for="Product.Name" class="text-black">Product Name : @Model.Product.Name</label>
+                <label asp-for="Product.Description">Product Description : @Model.Product.Description</label>
+                <label asp-for="Product.Price">Product Price : @Model.Product.Price.ToString("0.00")</label>
+                <label asp-for="Product.Category">Product Category : @Model.Product.Category.Name</label>
+                <div class="form-control">
+
+                    <label asp-for="Count"></label>
+                    <input asp-for="Count" class="form-control" />
+                    <span asp-validation-for="Count" class="text-danger"></span>
+                </div>
+                <div class="form-control">
+
+                   <button class="btn btn-success" asp-area="Customer" asp-controller="Home1" asp-action="Index">Back to list</button>
+                   <button class="btn btn-dark" type="submit">Add to cart</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>

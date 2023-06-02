@@ -1,0 +1,58 @@
+﻿@*@using MyAppDotnetCore6.Models.ViewModels*@
+
+@model MyAppDotnetCore6.Models.ViewModels.CategoryVM
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="container p-3">
+    <div class="col-3">
+
+        <h1>List of categories</h1>
+    </div>
+    <div class="col-9">
+        @*<a class="btn btn-primary" asp-action="Create" asp-controller="Category">Add new category</a>*@
+    <button class="btn btn-info" onclick="location.href='@Url.Action("CreateUpdate", "Category")'">Add New Category</button>
+        <a asp-action="CreateUpdate" asp-controller="Category" class="btn btn-success">Add in working condition</a>
+        @*<ul>
+            <li class="nav-item">
+                <a class="nav-link" asp-area="" asp-controller="Category" asp-action="Index">Category</a>
+            </li>
+        </ul>*@
+    </div>
+</div>
+<table class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>Category Name</th>
+            <th>Display Order</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.categories)
+        {
+
+
+            <tr>
+                <td>
+                    @item.Name
+                </td>
+
+                <td>
+                    @item.DisplayOrder
+                </td>
+                <td role="group">
+                    <a action="Edit" onclick="location.href='@Url.Action("CreateUpdate","Category",new { id =item.Id})'" class="btn btn-primary">Edit</a>
+                    <a action="Delete" onclick="return confirm('Are you sure you want to delete this item?') ? location.href='@Url.Action("Delete","Category",new { id =item.Id})' : false" class="btn btn-danger">Delete</a>
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+

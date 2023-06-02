@@ -1,0 +1,268 @@
+﻿@model MyAppDotnetCore6.Models.ViewModels.OrderVM
+@using MyAppDotnetCore6.CommonHelper
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<form method="post" asp-area="Admin" asp-controller="Order" asp-action="OrderDetails">
+    <input type="hidden" asp-for="OrderHeader.Id" />
+    <div class="container-sm">
+        <div class="row">
+            <div class="col-6">
+                <h2>Piuck details</h2>
+                <div class="row mb-3">
+                    @if (User.IsInRole(WebsiteRole.Roles_Admin) || User.IsInRole(WebsiteRole.Roles_Employee))
+                    {
+
+
+                        <label asp-for="OrderHeader.Name">Name</label>
+                        <input asp-for="OrderHeader.Name" class="form-control" />
+
+                    }
+                    else
+                    {
+
+                        <label asp-for="OrderHeader.Name">Name</label>
+                        <input asp-for="OrderHeader.Name" readonly class="form-control" />
+
+                    }
+                </div>
+                <div class="row mb-3">
+                    @if (User.IsInRole(WebsiteRole.Roles_Admin) || User.IsInRole(WebsiteRole.Roles_Employee))
+                    {
+                        <label asp-for="OrderHeader.Address">Address</label>
+                        <input asp-for="OrderHeader.Address" class="form-control" />
+
+                    }
+                    else
+                    {
+                        <label asp-for="OrderHeader.Address">Address</label>
+                        <input asp-for="OrderHeader.Address" readonly class="form-control" />
+
+                    }
+                </div>
+            </div>
+            <div class="row mb-3">
+                @if (User.IsInRole(WebsiteRole.Roles_Admin) || User.IsInRole(WebsiteRole.Roles_Employee))
+                {
+                    <label asp-for="OrderHeader.Phone">Phone</label>
+                    <input asp-for="OrderHeader.Phone" class="form-control" />
+
+                }
+                else
+                {
+                    <label asp-for="OrderHeader.Phone">Phone</label>
+                    <input asp-for="OrderHeader.Phone" readonly class="form-control" />
+
+                }
+            </div>
+
+            <div class="row mb-3">
+                @if (User.IsInRole(WebsiteRole.Roles_Admin) || User.IsInRole(WebsiteRole.Roles_Employee))
+                {
+                    <label asp-for="OrderHeader.City">City</label>
+                    <input asp-for="OrderHeader.City" class="form-control" />
+
+                }
+                else
+                {
+                    <label asp-for="OrderHeader.City">City</label>
+                    <input asp-for="OrderHeader.City" readonly class="form-control" />
+
+                }
+            </div>
+
+            <div class="row mb-3">
+                @if (User.IsInRole(WebsiteRole.Roles_Admin) || User.IsInRole(WebsiteRole.Roles_Employee))
+                {
+                    <label asp-for="OrderHeader.State">State</label>
+                    <input asp-for="OrderHeader.State" class="form-control" />
+
+                }
+                else
+                {
+                    <label asp-for="OrderHeader.State">State</label>
+                    <input asp-for="OrderHeader.State" readonly class="form-control" />
+
+                }
+            </div>
+
+            <div class="row mb-3">
+                @if (User.IsInRole(WebsiteRole.Roles_Admin) || User.IsInRole(WebsiteRole.Roles_Employee))
+                {
+                    <label asp-for="OrderHeader.PostalCode">PostalCode</label>
+                    <input asp-for="OrderHeader.PostalCode" class="form-control" />
+
+                }
+                else
+                {
+                    <label asp-for="OrderHeader.PostalCode">PostalCode</label>
+                    <input asp-for="OrderHeader.PostalCode" readonly class="form-control" />
+
+                }
+            </div>
+            <div class="row mb-3">
+                <label asp-for="OrderHeader.ApplicationUser.Email">Email</label>
+                <input readonly asp-for="OrderHeader.ApplicationUser.Email" class="form-control" />
+
+            </div>
+            @if (Model != null && Model.OrderHeader.DateOfOrder != null)
+            {
+                <div class="row mb-3">
+                    <label asp-for="OrderHeader.DateOfOrder">Order Date</label>
+                    <input readonly value="@Model.OrderHeader.DateOfOrder.ToShortDateString()" class="form-control" />
+
+                </div>
+            }
+            <div class="row mb-3">
+                @if (User.IsInRole(WebsiteRole.Roles_Admin) || User.IsInRole(WebsiteRole.Roles_Employee))
+                {
+                    <label asp-for="OrderHeader.TrackingNumber">TrackingNumber</label>
+                    <input id="OrderHeader_TrackingNumber" asp-for="OrderHeader.TrackingNumber" class="form-control" />
+
+                }
+                else
+                {
+                    <label asp-for="OrderHeader.TrackingNumber">TrackingNumber</label>
+                    <input asp-for="OrderHeader.TrackingNumber" readonly class="form-control" />
+
+                }
+            </div>
+            <div class="row mb-3">
+                @if (User.IsInRole(WebsiteRole.Roles_Admin) || User.IsInRole(WebsiteRole.Roles_Employee))
+                {
+                    <label asp-for="OrderHeader.Carrier">Carrier</label>
+                    <input id="OrderHeader_Carrier" asp-for="OrderHeader.Carrier" class="form-control" />
+
+                }
+                else
+                {
+                    <label asp-for="OrderHeader.Carrier">TrackingNumber</label>
+                    <input id="OrderHeader_Carrier" asp-for="OrderHeader.Carrier" readonly class="form-control" />
+
+                }
+            </div>
+            @if (Model != null && Model.OrderHeader.DateOfPayment != null)
+            {
+                <div class="row mb-3">
+                    <label asp-for="OrderHeader.DateOfPayment">Payment Date</label>
+                    <input readonly value="@Model.OrderHeader.DateOfPayment.ToShortDateString()" class="form-control" />
+
+                </div>
+
+                <div class="row mb-3">
+                    <label asp-for="OrderHeader.PaymentIntentId">PaymentIntentId</label>
+                    <input readonly value="@Model.OrderHeader.PaymentIntentId" class="form-control" />
+
+                </div>
+
+
+                <div class="row mb-3">
+                    <label asp-for="OrderHeader.PaymentStatus">PaymentStatus</label>
+                    <input readonly value="@Model.OrderHeader.PaymentStatus" class="form-control" />
+
+                </div>
+            }
+            <div class="row mb-3">
+                <label asp-for="OrderHeader.PaymentStatus">PaymentStatus</label>
+                <input readonly value="@Model.OrderHeader.PaymentStatus" class="form-control" />
+
+            </div>
+            <div class="row mb-3">
+                <button type="submit" class="btn btn-primary">Update Order</button>
+            </div>
+
+
+        </div>
+        <div class="col-6">
+            <div class="mb-4">
+                <div class="card-header py-3">
+                    <h5 class="mb-0">Order Summary</h5>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        @foreach (var item in Model.OrderDetail)
+                        {
+                            <li class="list-group-item d-flex justify-content-between align-items-center border-0">
+                                <span>@item.Product.Name</span>
+                                <span>@item.Count</span>
+                                <span>@item.Product.Price</span>
+                                <div class="text-end">@((item.Count * item.Price).ToString("c"))</div>
+                            </li>
+                        }
+                        <li class="list-group-item d-flex justify-content-between align-items-center border-0">
+                            <div>
+                                <strong>Total amount &nbsp;<span class="text-end">@Model.OrderHeader.OrderTotal.ToString("c")</span></strong>
+                                <strong>INR</strong>
+                            </div>
+                            <span><strong></strong></span>
+                        </li>
+                    </ul>
+                </div>
+                @if (User.IsInRole(WebsiteRole.Roles_Admin) || User.IsInRole(WebsiteRole.Roles_Employee))
+                {
+                    if (Model.OrderHeader.OrderStatus == OrderStatus.StatusApproved)
+                    {
+                        <button asp-action="InProcess" class="btn btn-info btn-lg btn-block mb-2">
+                            Start Processing
+                        </button>
+                    }
+
+                    if (Model.OrderHeader.OrderStatus == OrderStatus.StatusUnderProceesing)
+                    {
+                        <button asp-action="Shipped" onclick="return ValidateEmpty()" class="btn btn-info btn-lg btn-block mb-2">
+                            SHip Order
+                        </button>
+                    }
+
+                    if (Model.OrderHeader.OrderStatus != OrderStatus.StatusRefund && Model.OrderHeader.OrderStatus!=OrderStatus.StatusCancelled)
+                    {
+                        <button asp-action="CancelOrder" class="btn btn-info btn-lg btn-block mb-2">
+                            Cancel Order
+                        </button>
+                    }
+                    else{
+                        @if(User.IsInRole(WebsiteRole.Roles_User) && Model.OrderHeader.OrderStatus==OrderStatus.StatusPending)
+                        {
+                            <button asp-action="CancelOrder" class="btn btn-info btn-lg btn-block mb-2">
+                                Pay Now
+                            </button>
+                        }
+                    }
+                }
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+
+
+@section scripts{
+    @{
+    <partial name="_ValidationScriptsPartial" />
+    }
+    <script>
+        function ValidateEmpty() {
+            if (document.getElementById("OrderHeader_TrackingNumber").value == "") {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please Upload Image!!',
+                });
+                return false;
+            }
+            if (document.getElementById("OrderHeader_Carrier").value == "") {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Please Upload Image!!',
+                });
+                return false;
+            }
+            return true;
+        }
+    </script>
+}

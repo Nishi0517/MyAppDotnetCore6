@@ -1,0 +1,49 @@
+﻿@*@using MyAppDotnetCore6.Models.ViewModels*@
+
+@model MyAppDotnetCore6.Models.ViewModels.CategoryVM
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<form method="post" asp-area="Admin" asp-controller="Category" asp-action="CreateUpdate">
+    <input type="hidden" asp-for="Category.Id" />
+    <div class="border p-3 mt-4">
+        <div class="row pb-3">
+            <h2 class="text-primary">@((Model.Category == null || Model.Category.Id == 0) ? "Create Category" : "Update Category")</h2>
+            <hr />
+        </div>
+        <div class="row mb-3">
+            <label asp-for="Category.Name">Name</label>
+            @*<input class="form-control" value="@Model.Category.Name" name="Name" />*@
+            <input asp-for="Category.Name" class="form-control"/>
+            <span asp-validation-for="Category.Name" class="text-danger">Please enter Name</span>
+        </div>
+        <div class="row mb-3">
+            <label asp-for="Category.DisplayOrder">Display Order</label>
+            @*<input name="DisplayOrder" value="@Model.Category.DisplayOrder" class="form-control" />*@
+            <input asp-for="Category.DisplayOrder" class="form-control" />
+            <span asp-validation-for="Category.DisplayOrder" class="text-danger">Please enter display order</span>
+        </div>
+        @if (Model.Category== null || Model.Category.Id == 0)
+        {
+            <button class="btn btn-primary" type="submit">Create</button>
+        }
+        else
+        {
+            <button class="btn btn-success" type="submit">Update</button>
+        }
+    </div>
+
+    <a asp-action="Index" asp-controller="Category">Back to list</a>
+</form>
+<button class="btn btn-success" onclick="location.href='@Url.Action("Index", "Category")'">Back to list</button>
+
+
+
+@section scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+
+    }
+    }
