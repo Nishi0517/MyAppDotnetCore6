@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppWebCore6\\MyAppWebCore6.csproj": {}
+    "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppWebCore6\\MyAppWebCore6.csproj": {}
   },
   "projects": {
-    "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.CommonHelper\\MyAppDotnetCore6.CommonHelper.csproj": {
+    "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.CommonHelper\\MyAppDotnetCore6.CommonHelper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.CommonHelper\\MyAppDotnetCore6.CommonHelper.csproj",
+        "projectUniqueName": "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.CommonHelper\\MyAppDotnetCore6.CommonHelper.csproj",
         "projectName": "MyAppDotnetCore6.CommonHelper",
-        "projectPath": "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.CommonHelper\\MyAppDotnetCore6.CommonHelper.csproj",
+        "projectPath": "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.CommonHelper\\MyAppDotnetCore6.CommonHelper.csproj",
         "packagesPath": "C:\\Users\\ATI-1\\.nuget\\packages\\",
-        "outputPath": "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.CommonHelper\\obj\\",
+        "outputPath": "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.CommonHelper\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -77,14 +77,14 @@
         }
       }
     },
-    "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.DataAccessLayer\\MyAppDotnetCore6.DataAccessLayer.csproj": {
+    "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.DataAccessLayer\\MyAppDotnetCore6.DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.DataAccessLayer\\MyAppDotnetCore6.DataAccessLayer.csproj",
+        "projectUniqueName": "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.DataAccessLayer\\MyAppDotnetCore6.DataAccessLayer.csproj",
         "projectName": "MyAppDotnetCore6.DataAccessLayer",
-        "projectPath": "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.DataAccessLayer\\MyAppDotnetCore6.DataAccessLayer.csproj",
+        "projectPath": "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.DataAccessLayer\\MyAppDotnetCore6.DataAccessLayer.csproj",
         "packagesPath": "C:\\Users\\ATI-1\\.nuget\\packages\\",
-        "outputPath": "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.DataAccessLayer\\obj\\",
+        "outputPath": "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -105,11 +105,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.CommonHelper\\MyAppDotnetCore6.CommonHelper.csproj": {
-                "projectPath": "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.CommonHelper\\MyAppDotnetCore6.CommonHelper.csproj"
+              "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.CommonHelper\\MyAppDotnetCore6.CommonHelper.csproj": {
+                "projectPath": "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.CommonHelper\\MyAppDotnetCore6.CommonHelper.csproj"
               },
-              "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.Models\\MyAppDotnetCore6.Models.csproj": {
-                "projectPath": "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.Models\\MyAppDotnetCore6.Models.csproj"
+              "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.Models\\MyAppDotnetCore6.Models.csproj": {
+                "projectPath": "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.Models\\MyAppDotnetCore6.Models.csproj"
               }
             }
           }
@@ -161,14 +161,14 @@
         }
       }
     },
-    "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.Models\\MyAppDotnetCore6.Models.csproj": {
+    "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.Models\\MyAppDotnetCore6.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.Models\\MyAppDotnetCore6.Models.csproj",
+        "projectUniqueName": "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.Models\\MyAppDotnetCore6.Models.csproj",
         "projectName": "MyAppDotnetCore6.Models",
-        "projectPath": "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.Models\\MyAppDotnetCore6.Models.csproj",
+        "projectPath": "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.Models\\MyAppDotnetCore6.Models.csproj",
         "packagesPath": "C:\\Users\\ATI-1\\.nuget\\packages\\",
-        "outputPath": "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.Models\\obj\\",
+        "outputPath": "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -230,14 +230,14 @@
         }
       }
     },
-    "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppWebCore6\\MyAppWebCore6.csproj": {
+    "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppWebCore6\\MyAppWebCore6.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppWebCore6\\MyAppWebCore6.csproj",
+        "projectUniqueName": "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppWebCore6\\MyAppWebCore6.csproj",
         "projectName": "MyAppWebCore6",
-        "projectPath": "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppWebCore6\\MyAppWebCore6.csproj",
+        "projectPath": "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppWebCore6\\MyAppWebCore6.csproj",
         "packagesPath": "C:\\Users\\ATI-1\\.nuget\\packages\\",
-        "outputPath": "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppWebCore6\\obj\\",
+        "outputPath": "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppWebCore6\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -258,11 +258,11 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.CommonHelper\\MyAppDotnetCore6.CommonHelper.csproj": {
-                "projectPath": "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.CommonHelper\\MyAppDotnetCore6.CommonHelper.csproj"
+              "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.CommonHelper\\MyAppDotnetCore6.CommonHelper.csproj": {
+                "projectPath": "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.CommonHelper\\MyAppDotnetCore6.CommonHelper.csproj"
               },
-              "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.DataAccessLayer\\MyAppDotnetCore6.DataAccessLayer.csproj": {
-                "projectPath": "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.DataAccessLayer\\MyAppDotnetCore6.DataAccessLayer.csproj"
+              "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.DataAccessLayer\\MyAppDotnetCore6.DataAccessLayer.csproj": {
+                "projectPath": "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.DataAccessLayer\\MyAppDotnetCore6.DataAccessLayer.csproj"
               }
             }
           }

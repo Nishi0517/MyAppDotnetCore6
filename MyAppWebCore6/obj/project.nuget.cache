@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "M8PvRvNDC7fnBdGHC8uvPW7GhZ4zj3UsaZqNU3iJ2bnaLajOt4YEwi/IIV+gyHhu4947sOxUCcg8ey+PkXGcow==",
+  "dgSpecHash": "+9O4WaduB/lqpXbr0izOwtldQJdkks4zxXy6QNS11auHi3Z1jjCHhwFhSS65iNGTkl6qCuD0YcGh68Z6LX2vjg==",
   "success": true,
-  "projectFilePath": "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppWebCore6\\MyAppWebCore6.csproj",
+  "projectFilePath": "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppWebCore6\\MyAppWebCore6.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ATI-1\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\ATI-1\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

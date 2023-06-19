@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uej8ihkpD1AzeBu/VU2c+6p/t9UF0pQsQwxdTxubzFZEIvl/UAZ43FfbKxTAwPrFXBvH3QqsBEOxKOTRIC4Q5A==",
+  "dgSpecHash": "8WE/R0mYQVLRO85PBSJHOZolctoLNu9rj6el3qMxAE0ytPTVZa0gnQ+PG+QeXqXEdX4HhoV3AMQl59YvBIhJXw==",
   "success": true,
-  "projectFilePath": "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.DataAccessLayer\\MyAppDotnetCore6.DataAccessLayer.csproj",
+  "projectFilePath": "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.DataAccessLayer\\MyAppDotnetCore6.DataAccessLayer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ATI-1\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\ATI-1\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

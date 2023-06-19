@@ -1,0 +1,491 @@
+USE [MyAppWebCore6DB]
+GO
+/****** Object:  Table [dbo].[__EFMigrationsHistory]    Script Date: 19-06-2023 16:23:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[__EFMigrationsHistory](
+	[MigrationId] [nvarchar](150) NOT NULL,
+	[ProductVersion] [nvarchar](32) NOT NULL,
+ CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY CLUSTERED 
+(
+	[MigrationId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[AspNetRoleClaims]    Script Date: 19-06-2023 16:23:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[AspNetRoleClaims](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[RoleId] [nvarchar](450) NOT NULL,
+	[ClaimType] [nvarchar](max) NULL,
+	[ClaimValue] [nvarchar](max) NULL,
+ CONSTRAINT [PK_AspNetRoleClaims] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[AspNetRoles]    Script Date: 19-06-2023 16:23:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[AspNetRoles](
+	[Id] [nvarchar](450) NOT NULL,
+	[Name] [nvarchar](256) NULL,
+	[NormalizedName] [nvarchar](256) NULL,
+	[ConcurrencyStamp] [nvarchar](max) NULL,
+ CONSTRAINT [PK_AspNetRoles] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[AspNetUserClaims]    Script Date: 19-06-2023 16:23:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[AspNetUserClaims](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[UserId] [nvarchar](450) NOT NULL,
+	[ClaimType] [nvarchar](max) NULL,
+	[ClaimValue] [nvarchar](max) NULL,
+ CONSTRAINT [PK_AspNetUserClaims] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[AspNetUserLogins]    Script Date: 19-06-2023 16:23:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[AspNetUserLogins](
+	[LoginProvider] [nvarchar](450) NOT NULL,
+	[ProviderKey] [nvarchar](450) NOT NULL,
+	[ProviderDisplayName] [nvarchar](max) NULL,
+	[UserId] [nvarchar](450) NOT NULL,
+ CONSTRAINT [PK_AspNetUserLogins] PRIMARY KEY CLUSTERED 
+(
+	[LoginProvider] ASC,
+	[ProviderKey] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[AspNetUserRoles]    Script Date: 19-06-2023 16:23:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[AspNetUserRoles](
+	[UserId] [nvarchar](450) NOT NULL,
+	[RoleId] [nvarchar](450) NOT NULL,
+ CONSTRAINT [PK_AspNetUserRoles] PRIMARY KEY CLUSTERED 
+(
+	[UserId] ASC,
+	[RoleId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[AspNetUsers]    Script Date: 19-06-2023 16:23:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[AspNetUsers](
+	[Id] [nvarchar](450) NOT NULL,
+	[UserName] [nvarchar](256) NULL,
+	[NormalizedUserName] [nvarchar](256) NULL,
+	[Email] [nvarchar](256) NULL,
+	[NormalizedEmail] [nvarchar](256) NULL,
+	[EmailConfirmed] [bit] NOT NULL,
+	[PasswordHash] [nvarchar](max) NULL,
+	[SecurityStamp] [nvarchar](max) NULL,
+	[ConcurrencyStamp] [nvarchar](max) NULL,
+	[PhoneNumber] [nvarchar](max) NULL,
+	[PhoneNumberConfirmed] [bit] NOT NULL,
+	[TwoFactorEnabled] [bit] NOT NULL,
+	[LockoutEnd] [datetimeoffset](7) NULL,
+	[LockoutEnabled] [bit] NOT NULL,
+	[AccessFailedCount] [int] NOT NULL,
+	[Address] [nvarchar](max) NULL,
+	[City] [nvarchar](max) NULL,
+	[Discriminator] [nvarchar](max) NOT NULL,
+	[Name] [nvarchar](max) NULL,
+	[PinCode] [nvarchar](max) NULL,
+	[State] [nvarchar](max) NULL,
+ CONSTRAINT [PK_AspNetUsers] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[AspNetUserTokens]    Script Date: 19-06-2023 16:23:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[AspNetUserTokens](
+	[UserId] [nvarchar](450) NOT NULL,
+	[LoginProvider] [nvarchar](450) NOT NULL,
+	[Name] [nvarchar](450) NOT NULL,
+	[Value] [nvarchar](max) NULL,
+ CONSTRAINT [PK_AspNetUserTokens] PRIMARY KEY CLUSTERED 
+(
+	[UserId] ASC,
+	[LoginProvider] ASC,
+	[Name] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Carts]    Script Date: 19-06-2023 16:23:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Carts](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[ProductId] [int] NOT NULL,
+	[ApplicationUserId] [nvarchar](450) NOT NULL,
+	[Count] [int] NOT NULL,
+ CONSTRAINT [PK_Carts] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Categories]    Script Date: 19-06-2023 16:23:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Categories](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](max) NOT NULL,
+	[DisplayOrder] [int] NOT NULL,
+	[CreatedDateTime] [datetime2](7) NOT NULL,
+ CONSTRAINT [PK_Categories] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[OrderDetails]    Script Date: 19-06-2023 16:23:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[OrderDetails](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[OrderHeaderId] [int] NOT NULL,
+	[ProductId] [int] NOT NULL,
+	[Price] [float] NOT NULL,
+	[Count] [int] NOT NULL
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[OrderHeaders]    Script Date: 19-06-2023 16:23:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[OrderHeaders](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[ApplicationUserId] [nvarchar](450) NOT NULL,
+	[DateOfOrder] [datetime2](7) NOT NULL,
+	[DateOfShipping] [datetime2](7) NOT NULL,
+	[OrderTotal] [float] NOT NULL,
+	[OrderStatus] [nvarchar](max) NULL,
+	[PaymentStatus] [nvarchar](max) NULL,
+	[TrackingNumber] [nvarchar](max) NULL,
+	[Carrier] [nvarchar](max) NULL,
+	[SessionId] [nvarchar](max) NULL,
+	[PaymentIntentId] [nvarchar](max) NULL,
+	[DateOfPayment] [datetime2](7) NOT NULL,
+	[DueDate] [datetime2](7) NOT NULL,
+	[Phone] [nvarchar](max) NOT NULL,
+	[Address] [nvarchar](max) NOT NULL,
+	[City] [nvarchar](max) NOT NULL,
+	[State] [nvarchar](max) NOT NULL,
+	[PostalCode] [nvarchar](max) NOT NULL,
+	[Name] [nvarchar](max) NOT NULL,
+ CONSTRAINT [PK_OrderHeaders] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Products]    Script Date: 19-06-2023 16:23:11 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Products](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [nvarchar](max) NOT NULL,
+	[Description] [nvarchar](max) NOT NULL,
+	[Price] [float] NOT NULL,
+	[ImageUrl] [nvarchar](max) NOT NULL,
+	[CategoryId] [int] NOT NULL,
+ CONSTRAINT [PK_Products] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20230426063537_AddCategoryToDatabaSe', N'7.0.5')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20230503120702_addProduct', N'7.0.5')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20230509061752_IdentityToDatabase', N'7.0.5')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20230509062929_AddUserToDB', N'7.0.5')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20230509085502_AddCartToDB', N'7.0.5')
+GO
+INSERT [dbo].[__EFMigrationsHistory] ([MigrationId], [ProductVersion]) VALUES (N'20230510065239_OrderToDb', N'7.0.5')
+GO
+INSERT [dbo].[AspNetRoles] ([Id], [Name], [NormalizedName], [ConcurrencyStamp]) VALUES (N'2f76a073-f4f1-4799-8e09-5b99086b01aa', N'Employee', N'EMPLOYEE', N'f8d78b0c-a575-4b2b-b601-83374394b9e7')
+GO
+INSERT [dbo].[AspNetRoles] ([Id], [Name], [NormalizedName], [ConcurrencyStamp]) VALUES (N'e47a2fee-f691-4bb5-9cfd-8d4d1abd23b5', N'Customer', N'CUSTOMER', N'ce635499-a829-47d0-bec3-915bbcf35e78')
+GO
+INSERT [dbo].[AspNetRoles] ([Id], [Name], [NormalizedName], [ConcurrencyStamp]) VALUES (N'f5e68c06-84bd-4045-8410-1bbe4e585236', N'Admin', N'ADMIN', N'30330e48-64f1-47dc-8708-9e1a88a84c49')
+GO
+INSERT [dbo].[AspNetUserRoles] ([UserId], [RoleId]) VALUES (N'33e5a78b-2255-4eae-a1fb-970b7c9fba5c', N'e47a2fee-f691-4bb5-9cfd-8d4d1abd23b5')
+GO
+INSERT [dbo].[AspNetUserRoles] ([UserId], [RoleId]) VALUES (N'451f88e0-0b40-439e-aae0-a8ca957ef8a1', N'e47a2fee-f691-4bb5-9cfd-8d4d1abd23b5')
+GO
+INSERT [dbo].[AspNetUserRoles] ([UserId], [RoleId]) VALUES (N'81eade44-1106-42a6-bbca-27811d0455cf', N'e47a2fee-f691-4bb5-9cfd-8d4d1abd23b5')
+GO
+INSERT [dbo].[AspNetUserRoles] ([UserId], [RoleId]) VALUES (N'8c2f19d3-4bcc-4a5b-b215-e2cf17f13d7d', N'e47a2fee-f691-4bb5-9cfd-8d4d1abd23b5')
+GO
+INSERT [dbo].[AspNetUserRoles] ([UserId], [RoleId]) VALUES (N'9890f95d-dfed-4853-b738-83736463298f', N'e47a2fee-f691-4bb5-9cfd-8d4d1abd23b5')
+GO
+INSERT [dbo].[AspNetUserRoles] ([UserId], [RoleId]) VALUES (N'19eb99ac-f72f-46b1-8078-8148dc34f98f', N'f5e68c06-84bd-4045-8410-1bbe4e585236')
+GO
+INSERT [dbo].[AspNetUsers] ([Id], [UserName], [NormalizedUserName], [Email], [NormalizedEmail], [EmailConfirmed], [PasswordHash], [SecurityStamp], [ConcurrencyStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEnd], [LockoutEnabled], [AccessFailedCount], [Address], [City], [Discriminator], [Name], [PinCode], [State]) VALUES (N'0135f3ef-cd53-42bf-a182-62131b7390ae', N'abc@gmail.com', N'ABC@GMAIL.COM', N'abc@gmail.com', N'ABC@GMAIL.COM', 0, N'AQAAAAEAACcQAAAAEFwXyO3v6AVn6tGtvg4rX2/1otAB2loSF79i5UxiXjIxh45jAozKLJX+0IgsOZuv/w==', N'HX6M3AHPY7AXXK454AINV3EWXHTT7I4K', N'e2674a78-2975-4bee-8d3f-89483d868430', NULL, 0, 0, NULL, 1, 0, NULL, NULL, N'IdentityUser', NULL, NULL, NULL)
+GO
+INSERT [dbo].[AspNetUsers] ([Id], [UserName], [NormalizedUserName], [Email], [NormalizedEmail], [EmailConfirmed], [PasswordHash], [SecurityStamp], [ConcurrencyStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEnd], [LockoutEnabled], [AccessFailedCount], [Address], [City], [Discriminator], [Name], [PinCode], [State]) VALUES (N'19eb99ac-f72f-46b1-8078-8148dc34f98f', N'superadmin@xyz.com', N'SUPERADMIN@XYZ.COM', N'superadmin@xyz.com', N'SUPERADMIN@XYZ.COM', 0, N'AQAAAAEAACcQAAAAEC9bUFNU8+DLiq3OC1qIP8O1w6OrmtamaKU+ofB7MO6iDyErv+pI+vg0NR2GsE9YIw==', N'HE5VA45DKFZ3ZYRKNYZW7MYZYYGC7SIG', N'3ff098e2-85ba-49df-b6f1-836cbdf8ae70', N'9854745412', 0, 0, NULL, 1, 0, N'XYZZ', N'Surat', N'ApplicationUser', N'Super Admin', N'395009', N'Gujarat')
+GO
+INSERT [dbo].[AspNetUsers] ([Id], [UserName], [NormalizedUserName], [Email], [NormalizedEmail], [EmailConfirmed], [PasswordHash], [SecurityStamp], [ConcurrencyStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEnd], [LockoutEnabled], [AccessFailedCount], [Address], [City], [Discriminator], [Name], [PinCode], [State]) VALUES (N'33e5a78b-2255-4eae-a1fb-970b7c9fba5c', N'xyz@gmail.com', N'XYZ@GMAIL.COM', N'xyz@gmail.com', N'XYZ@GMAIL.COM', 0, N'AQAAAAEAACcQAAAAEKN6eWxMqKyFoT/GIGyY7ppeuI7sJu6OShDUHnsyIG/JROK5NdWKXbdkL7QGFBhGUw==', N'EO3KUIVYIRU6PDUEK2RIWTG7LQLBTAFF', N'e920e879-8761-4050-be1c-c6ace542d1a7', N'8745874587', 0, 0, NULL, 1, 0, N'hgvu', N'Vadodara', N'ApplicationUser', N'xyz', N'369856', N'Gujarat')
+GO
+INSERT [dbo].[AspNetUsers] ([Id], [UserName], [NormalizedUserName], [Email], [NormalizedEmail], [EmailConfirmed], [PasswordHash], [SecurityStamp], [ConcurrencyStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEnd], [LockoutEnabled], [AccessFailedCount], [Address], [City], [Discriminator], [Name], [PinCode], [State]) VALUES (N'451f88e0-0b40-439e-aae0-a8ca957ef8a1', N'soniya@gmail.com', N'SONIYA@GMAIL.COM', N'soniya@gmail.com', N'SONIYA@GMAIL.COM', 0, N'AQAAAAEAACcQAAAAEKhxjyZKWFzkkFZpwdGPK5GQS/X8rgIpxdWECkm+36/pa5GGZ2KQ0jWbd/RKHWSHtA==', N'2QDMQUWI7ZEMNNCMUXULYPQRRXJX6DBS', N'e3319a2d-15d8-43c9-95f9-344fbbc38ff8', N'89985659895', 0, 0, NULL, 1, 0, N'hgcvjh', N'jhbkij', N'ApplicationUser', N'Soniya', N'369856', N'jkbjk')
+GO
+INSERT [dbo].[AspNetUsers] ([Id], [UserName], [NormalizedUserName], [Email], [NormalizedEmail], [EmailConfirmed], [PasswordHash], [SecurityStamp], [ConcurrencyStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEnd], [LockoutEnabled], [AccessFailedCount], [Address], [City], [Discriminator], [Name], [PinCode], [State]) VALUES (N'5e870c2b-62c7-484e-90f5-7f9c0b41ef31', N'test@gmail.com', N'TEST@GMAIL.COM', N'test@gmail.com', N'TEST@GMAIL.COM', 0, N'AQAAAAEAACcQAAAAEIhEc7YOweEcs1HvU5QoRJYMXwfGTJEifVsYG69EM1uJidJahXg2kngQY+shYUONAQ==', N'5BQ7SZU2YH4HSPWT4RB2TYF6KCTOX26R', N'12185bab-d476-4112-b2da-4959e85eb901', NULL, 0, 0, NULL, 1, 0, NULL, NULL, N'', NULL, NULL, NULL)
+GO
+INSERT [dbo].[AspNetUsers] ([Id], [UserName], [NormalizedUserName], [Email], [NormalizedEmail], [EmailConfirmed], [PasswordHash], [SecurityStamp], [ConcurrencyStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEnd], [LockoutEnabled], [AccessFailedCount], [Address], [City], [Discriminator], [Name], [PinCode], [State]) VALUES (N'81eade44-1106-42a6-bbca-27811d0455cf', N'rahul@gmail.com', N'RAHUL@GMAIL.COM', N'rahul@gmail.com', N'RAHUL@GMAIL.COM', 0, N'AQAAAAEAACcQAAAAELblIihDIIEq3tTu+WxLMC6JTRcqeQ2QMVGpvBBRf03LVLjU1buvhKrPHm+BNCY8og==', N'SK7DFBDWDYTBTY4HWDXS65F7U3GOTRCS', N'43bb2080-8686-407e-a882-51093e63d2dc', N'865745474', 0, 0, NULL, 1, 0, N'hgvujh', N'Surat', N'ApplicationUser', N'Rahul', N'395009', N'Gujarta')
+GO
+INSERT [dbo].[AspNetUsers] ([Id], [UserName], [NormalizedUserName], [Email], [NormalizedEmail], [EmailConfirmed], [PasswordHash], [SecurityStamp], [ConcurrencyStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEnd], [LockoutEnabled], [AccessFailedCount], [Address], [City], [Discriminator], [Name], [PinCode], [State]) VALUES (N'8c2f19d3-4bcc-4a5b-b215-e2cf17f13d7d', N'teena@gmail.com', N'TEENA@GMAIL.COM', N'teena@gmail.com', N'TEENA@GMAIL.COM', 0, N'AQAAAAEAACcQAAAAEMEL8ZDt2nZwLPbrVAz/Zk5Qc4rwtZ15YP+wOyc0tzoXNSIh0NsCBVIxZnsEgB1OcQ==', N'AW7AGPXBI7DBW3TNLJQY3PWYAEQ3FVH4', N'00e16ee7-f78a-45c1-9999-21e03600108c', N'5647896', 0, 0, NULL, 1, 0, N'hgvj', N'Surat', N'ApplicationUser', N'teena', N'396585', N'Gujarat')
+GO
+INSERT [dbo].[AspNetUsers] ([Id], [UserName], [NormalizedUserName], [Email], [NormalizedEmail], [EmailConfirmed], [PasswordHash], [SecurityStamp], [ConcurrencyStamp], [PhoneNumber], [PhoneNumberConfirmed], [TwoFactorEnabled], [LockoutEnd], [LockoutEnabled], [AccessFailedCount], [Address], [City], [Discriminator], [Name], [PinCode], [State]) VALUES (N'9890f95d-dfed-4853-b738-83736463298f', N'user@gmail.com', N'USER@GMAIL.COM', N'user@gmail.com', N'USER@GMAIL.COM', 0, N'AQAAAAEAACcQAAAAEJIv0Itk/vjwYME66CbAPpSvYSRs1NTXVoE8ilR/AA/enrNzptrJQngGgAzPVlw7+g==', N'5VOFK5V2J33KDTEQS6AG7P3JJOA7P3WA', N'9bb46821-b11a-4baa-bf88-cfa63c84beb9', N'9856587451', 0, 0, NULL, 1, 0, N'gvv', N'surat', N'ApplicationUser', N'user', N'399009', N'gujarat')
+GO
+SET IDENTITY_INSERT [dbo].[Carts] ON 
+GO
+INSERT [dbo].[Carts] ([Id], [ProductId], [ApplicationUserId], [Count]) VALUES (1, 9, N'33e5a78b-2255-4eae-a1fb-970b7c9fba5c', 2)
+GO
+INSERT [dbo].[Carts] ([Id], [ProductId], [ApplicationUserId], [Count]) VALUES (3, 9, N'0135f3ef-cd53-42bf-a182-62131b7390ae', 2)
+GO
+INSERT [dbo].[Carts] ([Id], [ProductId], [ApplicationUserId], [Count]) VALUES (5, 11, N'0135f3ef-cd53-42bf-a182-62131b7390ae', 2)
+GO
+INSERT [dbo].[Carts] ([Id], [ProductId], [ApplicationUserId], [Count]) VALUES (8, 11, N'81eade44-1106-42a6-bbca-27811d0455cf', 1)
+GO
+INSERT [dbo].[Carts] ([Id], [ProductId], [ApplicationUserId], [Count]) VALUES (9, 12, N'81eade44-1106-42a6-bbca-27811d0455cf', 2)
+GO
+INSERT [dbo].[Carts] ([Id], [ProductId], [ApplicationUserId], [Count]) VALUES (18, 11, N'8c2f19d3-4bcc-4a5b-b215-e2cf17f13d7d', 4)
+GO
+INSERT [dbo].[Carts] ([Id], [ProductId], [ApplicationUserId], [Count]) VALUES (19, 12, N'19eb99ac-f72f-46b1-8078-8148dc34f98f', 4)
+GO
+SET IDENTITY_INSERT [dbo].[Carts] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Categories] ON 
+GO
+INSERT [dbo].[Categories] ([Id], [Name], [DisplayOrder], [CreatedDateTime]) VALUES (4, N'Maruti Suzuki', 10, CAST(N'2023-05-03T16:14:52.2585444' AS DateTime2))
+GO
+INSERT [dbo].[Categories] ([Id], [Name], [DisplayOrder], [CreatedDateTime]) VALUES (6, N'Toyota', 2, CAST(N'2023-05-03T12:57:09.7900214' AS DateTime2))
+GO
+INSERT [dbo].[Categories] ([Id], [Name], [DisplayOrder], [CreatedDateTime]) VALUES (10, N'Suzuki', 2, CAST(N'2023-05-05T17:49:33.0138945' AS DateTime2))
+GO
+SET IDENTITY_INSERT [dbo].[Categories] OFF
+GO
+SET IDENTITY_INSERT [dbo].[OrderDetails] ON 
+GO
+INSERT [dbo].[OrderDetails] ([Id], [OrderHeaderId], [ProductId], [Price], [Count]) VALUES (2, 2, 9, 15, 2)
+GO
+INSERT [dbo].[OrderDetails] ([Id], [OrderHeaderId], [ProductId], [Price], [Count]) VALUES (3, 2, 11, 150, 3)
+GO
+INSERT [dbo].[OrderDetails] ([Id], [OrderHeaderId], [ProductId], [Price], [Count]) VALUES (4, 3, 9, 15, 1)
+GO
+INSERT [dbo].[OrderDetails] ([Id], [OrderHeaderId], [ProductId], [Price], [Count]) VALUES (5, 4, 11, 150, 2)
+GO
+INSERT [dbo].[OrderDetails] ([Id], [OrderHeaderId], [ProductId], [Price], [Count]) VALUES (6, 5, 11, 150, 2)
+GO
+INSERT [dbo].[OrderDetails] ([Id], [OrderHeaderId], [ProductId], [Price], [Count]) VALUES (7, 6, 11, 150, 2)
+GO
+INSERT [dbo].[OrderDetails] ([Id], [OrderHeaderId], [ProductId], [Price], [Count]) VALUES (8, 7, 11, 150, 2)
+GO
+INSERT [dbo].[OrderDetails] ([Id], [OrderHeaderId], [ProductId], [Price], [Count]) VALUES (9, 8, 11, 150, 2)
+GO
+INSERT [dbo].[OrderDetails] ([Id], [OrderHeaderId], [ProductId], [Price], [Count]) VALUES (10, 9, 11, 150, 2)
+GO
+INSERT [dbo].[OrderDetails] ([Id], [OrderHeaderId], [ProductId], [Price], [Count]) VALUES (11, 10, 11, 150, 2)
+GO
+INSERT [dbo].[OrderDetails] ([Id], [OrderHeaderId], [ProductId], [Price], [Count]) VALUES (12, 11, 11, 150, 2)
+GO
+INSERT [dbo].[OrderDetails] ([Id], [OrderHeaderId], [ProductId], [Price], [Count]) VALUES (13, 12, 11, 150, 2)
+GO
+INSERT [dbo].[OrderDetails] ([Id], [OrderHeaderId], [ProductId], [Price], [Count]) VALUES (14, 13, 11, 150, 2)
+GO
+INSERT [dbo].[OrderDetails] ([Id], [OrderHeaderId], [ProductId], [Price], [Count]) VALUES (15, 14, 11, 150, 2)
+GO
+INSERT [dbo].[OrderDetails] ([Id], [OrderHeaderId], [ProductId], [Price], [Count]) VALUES (16, 15, 11, 150, 2)
+GO
+INSERT [dbo].[OrderDetails] ([Id], [OrderHeaderId], [ProductId], [Price], [Count]) VALUES (17, 16, 9, 15, 1)
+GO
+INSERT [dbo].[OrderDetails] ([Id], [OrderHeaderId], [ProductId], [Price], [Count]) VALUES (18, 17, 9, 15, 1)
+GO
+INSERT [dbo].[OrderDetails] ([Id], [OrderHeaderId], [ProductId], [Price], [Count]) VALUES (19, 17, 11, 150, 3)
+GO
+INSERT [dbo].[OrderDetails] ([Id], [OrderHeaderId], [ProductId], [Price], [Count]) VALUES (20, 18, 9, 15, 1)
+GO
+INSERT [dbo].[OrderDetails] ([Id], [OrderHeaderId], [ProductId], [Price], [Count]) VALUES (21, 18, 11, 150, 3)
+GO
+INSERT [dbo].[OrderDetails] ([Id], [OrderHeaderId], [ProductId], [Price], [Count]) VALUES (22, 19, 11, 150, 4)
+GO
+INSERT [dbo].[OrderDetails] ([Id], [OrderHeaderId], [ProductId], [Price], [Count]) VALUES (23, 20, 11, 150, 4)
+GO
+INSERT [dbo].[OrderDetails] ([Id], [OrderHeaderId], [ProductId], [Price], [Count]) VALUES (24, 21, 12, 100, 4)
+GO
+SET IDENTITY_INSERT [dbo].[OrderDetails] OFF
+GO
+SET IDENTITY_INSERT [dbo].[OrderHeaders] ON 
+GO
+INSERT [dbo].[OrderHeaders] ([Id], [ApplicationUserId], [DateOfOrder], [DateOfShipping], [OrderTotal], [OrderStatus], [PaymentStatus], [TrackingNumber], [Carrier], [SessionId], [PaymentIntentId], [DateOfPayment], [DueDate], [Phone], [Address], [City], [State], [PostalCode], [Name]) VALUES (1, N'8c2f19d3-4bcc-4a5b-b215-e2cf17f13d7d', CAST(N'2023-05-10T15:49:45.1920031' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), 480, N'Pending', N'Pending', NULL, NULL, NULL, NULL, CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), N'5647896', N'hgvj', N'Surat', N'Gujarat', N'396585', N'teena')
+GO
+INSERT [dbo].[OrderHeaders] ([Id], [ApplicationUserId], [DateOfOrder], [DateOfShipping], [OrderTotal], [OrderStatus], [PaymentStatus], [TrackingNumber], [Carrier], [SessionId], [PaymentIntentId], [DateOfPayment], [DueDate], [Phone], [Address], [City], [State], [PostalCode], [Name]) VALUES (2, N'8c2f19d3-4bcc-4a5b-b215-e2cf17f13d7d', CAST(N'2023-05-10T15:55:41.3562455' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), 480, N'Pending', N'Pending', NULL, NULL, NULL, NULL, CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), N'5647896', N'hgvj', N'Surat', N'Gujarat', N'396585', N'teena')
+GO
+INSERT [dbo].[OrderHeaders] ([Id], [ApplicationUserId], [DateOfOrder], [DateOfShipping], [OrderTotal], [OrderStatus], [PaymentStatus], [TrackingNumber], [Carrier], [SessionId], [PaymentIntentId], [DateOfPayment], [DueDate], [Phone], [Address], [City], [State], [PostalCode], [Name]) VALUES (3, N'8c2f19d3-4bcc-4a5b-b215-e2cf17f13d7d', CAST(N'2023-05-10T15:57:49.2616546' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), 15, N'Pending', N'Pending', NULL, NULL, NULL, NULL, CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), N'5647896', N'hgvj', N'Surat', N'Gujarat', N'396585', N'teena')
+GO
+INSERT [dbo].[OrderHeaders] ([Id], [ApplicationUserId], [DateOfOrder], [DateOfShipping], [OrderTotal], [OrderStatus], [PaymentStatus], [TrackingNumber], [Carrier], [SessionId], [PaymentIntentId], [DateOfPayment], [DueDate], [Phone], [Address], [City], [State], [PostalCode], [Name]) VALUES (4, N'8c2f19d3-4bcc-4a5b-b215-e2cf17f13d7d', CAST(N'2023-05-10T17:38:13.2909018' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), 300, N'Pending', N'Pending', NULL, NULL, NULL, NULL, CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), N'5647896', N'hgvj', N'Surat', N'Gujarat', N'396585', N'teena')
+GO
+INSERT [dbo].[OrderHeaders] ([Id], [ApplicationUserId], [DateOfOrder], [DateOfShipping], [OrderTotal], [OrderStatus], [PaymentStatus], [TrackingNumber], [Carrier], [SessionId], [PaymentIntentId], [DateOfPayment], [DueDate], [Phone], [Address], [City], [State], [PostalCode], [Name]) VALUES (5, N'8c2f19d3-4bcc-4a5b-b215-e2cf17f13d7d', CAST(N'2023-05-10T17:45:45.0968082' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), 300, N'Pending', N'Pending', NULL, NULL, NULL, NULL, CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), N'5647896', N'hgvj', N'Surat', N'Gujarat', N'396585', N'teena')
+GO
+INSERT [dbo].[OrderHeaders] ([Id], [ApplicationUserId], [DateOfOrder], [DateOfShipping], [OrderTotal], [OrderStatus], [PaymentStatus], [TrackingNumber], [Carrier], [SessionId], [PaymentIntentId], [DateOfPayment], [DueDate], [Phone], [Address], [City], [State], [PostalCode], [Name]) VALUES (6, N'8c2f19d3-4bcc-4a5b-b215-e2cf17f13d7d', CAST(N'2023-05-10T17:46:36.7219762' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), 300, N'Pending', N'Pending', NULL, NULL, N'cs_test_a1q9ojg8codvK7pRYUI9sYMyaVOhQ0SdDoLvJX7QSb5XQ39fixEMD0gF8U', NULL, CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), N'5647896', N'hgvj', N'Surat', N'Gujarat', N'396585', N'teena')
+GO
+INSERT [dbo].[OrderHeaders] ([Id], [ApplicationUserId], [DateOfOrder], [DateOfShipping], [OrderTotal], [OrderStatus], [PaymentStatus], [TrackingNumber], [Carrier], [SessionId], [PaymentIntentId], [DateOfPayment], [DueDate], [Phone], [Address], [City], [State], [PostalCode], [Name]) VALUES (7, N'8c2f19d3-4bcc-4a5b-b215-e2cf17f13d7d', CAST(N'2023-05-10T17:47:13.6773454' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), 300, N'Pending', N'Pending', NULL, NULL, N'cs_test_a1APfVNa4YUEL9IgsE5Ys9hzvy6INmhDYQX4H2Ubzfmv3gwyrActdaZpEP', NULL, CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), N'5647896', N'hgvj', N'Surat', N'Gujarat', N'396585', N'teena')
+GO
+INSERT [dbo].[OrderHeaders] ([Id], [ApplicationUserId], [DateOfOrder], [DateOfShipping], [OrderTotal], [OrderStatus], [PaymentStatus], [TrackingNumber], [Carrier], [SessionId], [PaymentIntentId], [DateOfPayment], [DueDate], [Phone], [Address], [City], [State], [PostalCode], [Name]) VALUES (8, N'8c2f19d3-4bcc-4a5b-b215-e2cf17f13d7d', CAST(N'2023-05-10T17:48:09.7480034' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), 300, N'Pending', N'Pending', NULL, NULL, N'cs_test_a1NKAgsoXdpdaYgB8WCeASGwBF8dYQ1bxsioDeLxTka1VC1PbZrPBhokRG', NULL, CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), N'5647896', N'hgvj', N'Surat', N'Gujarat', N'396585', N'teena')
+GO
+INSERT [dbo].[OrderHeaders] ([Id], [ApplicationUserId], [DateOfOrder], [DateOfShipping], [OrderTotal], [OrderStatus], [PaymentStatus], [TrackingNumber], [Carrier], [SessionId], [PaymentIntentId], [DateOfPayment], [DueDate], [Phone], [Address], [City], [State], [PostalCode], [Name]) VALUES (9, N'8c2f19d3-4bcc-4a5b-b215-e2cf17f13d7d', CAST(N'2023-05-12T09:38:40.3015156' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), 300, N'Pending', N'Pending', NULL, NULL, N'cs_test_a1NZbPpe4KtWC5TYgLL3Ee9Z7W9VUovp3kI5Rs0adzGECOjcPu63xTDuPW', NULL, CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), N'5647896', N'hgvj', N'Surat', N'Gujarat', N'396585', N'teena')
+GO
+INSERT [dbo].[OrderHeaders] ([Id], [ApplicationUserId], [DateOfOrder], [DateOfShipping], [OrderTotal], [OrderStatus], [PaymentStatus], [TrackingNumber], [Carrier], [SessionId], [PaymentIntentId], [DateOfPayment], [DueDate], [Phone], [Address], [City], [State], [PostalCode], [Name]) VALUES (10, N'8c2f19d3-4bcc-4a5b-b215-e2cf17f13d7d', CAST(N'2023-05-12T09:48:09.0453182' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), 300, N'Pending', N'Pending', NULL, NULL, NULL, NULL, CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), N'5647896', N'hgvj', N'Surat', N'Gujarat', N'396585', N'teena')
+GO
+INSERT [dbo].[OrderHeaders] ([Id], [ApplicationUserId], [DateOfOrder], [DateOfShipping], [OrderTotal], [OrderStatus], [PaymentStatus], [TrackingNumber], [Carrier], [SessionId], [PaymentIntentId], [DateOfPayment], [DueDate], [Phone], [Address], [City], [State], [PostalCode], [Name]) VALUES (11, N'8c2f19d3-4bcc-4a5b-b215-e2cf17f13d7d', CAST(N'2023-05-12T09:56:33.9122865' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), 300, N'Pending', N'Pending', NULL, NULL, NULL, NULL, CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), N'5647896', N'hgvj', N'Surat', N'Gujarat', N'396585', N'teena')
+GO
+INSERT [dbo].[OrderHeaders] ([Id], [ApplicationUserId], [DateOfOrder], [DateOfShipping], [OrderTotal], [OrderStatus], [PaymentStatus], [TrackingNumber], [Carrier], [SessionId], [PaymentIntentId], [DateOfPayment], [DueDate], [Phone], [Address], [City], [State], [PostalCode], [Name]) VALUES (12, N'8c2f19d3-4bcc-4a5b-b215-e2cf17f13d7d', CAST(N'2023-05-12T09:59:42.5235255' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), 300, N'Pending', N'Pending', NULL, NULL, NULL, NULL, CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), N'5647896', N'hgvj', N'Surat', N'Gujarat', N'396585', N'teena')
+GO
+INSERT [dbo].[OrderHeaders] ([Id], [ApplicationUserId], [DateOfOrder], [DateOfShipping], [OrderTotal], [OrderStatus], [PaymentStatus], [TrackingNumber], [Carrier], [SessionId], [PaymentIntentId], [DateOfPayment], [DueDate], [Phone], [Address], [City], [State], [PostalCode], [Name]) VALUES (13, N'8c2f19d3-4bcc-4a5b-b215-e2cf17f13d7d', CAST(N'2023-05-12T10:07:45.6161929' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), 300, N'Pending', N'Pending', NULL, NULL, NULL, NULL, CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), N'5647896', N'hgvj', N'Surat', N'Gujarat', N'396585', N'teena')
+GO
+INSERT [dbo].[OrderHeaders] ([Id], [ApplicationUserId], [DateOfOrder], [DateOfShipping], [OrderTotal], [OrderStatus], [PaymentStatus], [TrackingNumber], [Carrier], [SessionId], [PaymentIntentId], [DateOfPayment], [DueDate], [Phone], [Address], [City], [State], [PostalCode], [Name]) VALUES (14, N'8c2f19d3-4bcc-4a5b-b215-e2cf17f13d7d', CAST(N'2023-05-12T10:26:31.1193450' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), 300, N'Pending', N'Pending', NULL, NULL, NULL, NULL, CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), N'5647896', N'hgvj', N'Surat', N'Gujarat', N'396585', N'teena')
+GO
+INSERT [dbo].[OrderHeaders] ([Id], [ApplicationUserId], [DateOfOrder], [DateOfShipping], [OrderTotal], [OrderStatus], [PaymentStatus], [TrackingNumber], [Carrier], [SessionId], [PaymentIntentId], [DateOfPayment], [DueDate], [Phone], [Address], [City], [State], [PostalCode], [Name]) VALUES (15, N'8c2f19d3-4bcc-4a5b-b215-e2cf17f13d7d', CAST(N'2023-05-12T10:27:31.0969348' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), 300, N'Pending', N'Pending', NULL, NULL, N'cs_test_a17EZBG8XMfhC7QP3Y4HjGFWafCdgYAROiKSeNKoey8nNTGQ3LRaM97xFV', NULL, CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), N'5647896', N'hgvj', N'Surat', N'Gujarat', N'396585', N'teena')
+GO
+INSERT [dbo].[OrderHeaders] ([Id], [ApplicationUserId], [DateOfOrder], [DateOfShipping], [OrderTotal], [OrderStatus], [PaymentStatus], [TrackingNumber], [Carrier], [SessionId], [PaymentIntentId], [DateOfPayment], [DueDate], [Phone], [Address], [City], [State], [PostalCode], [Name]) VALUES (16, N'8c2f19d3-4bcc-4a5b-b215-e2cf17f13d7d', CAST(N'2023-05-12T10:32:51.6372602' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), 15, N'Pending', N'Pending', NULL, NULL, NULL, NULL, CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), N'5647896', N'hgvj', N'Surat', N'Gujarat', N'396585', N'teena')
+GO
+INSERT [dbo].[OrderHeaders] ([Id], [ApplicationUserId], [DateOfOrder], [DateOfShipping], [OrderTotal], [OrderStatus], [PaymentStatus], [TrackingNumber], [Carrier], [SessionId], [PaymentIntentId], [DateOfPayment], [DueDate], [Phone], [Address], [City], [State], [PostalCode], [Name]) VALUES (17, N'8c2f19d3-4bcc-4a5b-b215-e2cf17f13d7d', CAST(N'2023-05-12T10:34:18.5129523' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), 465, N'Pending', N'Pending', NULL, NULL, NULL, NULL, CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), N'5647896', N'hgvj', N'Surat', N'Gujarat', N'396585', N'teena')
+GO
+INSERT [dbo].[OrderHeaders] ([Id], [ApplicationUserId], [DateOfOrder], [DateOfShipping], [OrderTotal], [OrderStatus], [PaymentStatus], [TrackingNumber], [Carrier], [SessionId], [PaymentIntentId], [DateOfPayment], [DueDate], [Phone], [Address], [City], [State], [PostalCode], [Name]) VALUES (18, N'8c2f19d3-4bcc-4a5b-b215-e2cf17f13d7d', CAST(N'2023-05-12T10:36:02.3482906' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), 465, N'Pending', N'Pending', NULL, NULL, N'cs_test_b1BUtun2vMNnC20kQLNqiIZn86ey7zDjabxv1Ig5ZNViMVsxTEgqRfzkKp', NULL, CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), N'5647896', N'hgvj', N'Surat', N'Gujarat', N'396585', N'teena')
+GO
+INSERT [dbo].[OrderHeaders] ([Id], [ApplicationUserId], [DateOfOrder], [DateOfShipping], [OrderTotal], [OrderStatus], [PaymentStatus], [TrackingNumber], [Carrier], [SessionId], [PaymentIntentId], [DateOfPayment], [DueDate], [Phone], [Address], [City], [State], [PostalCode], [Name]) VALUES (19, N'8c2f19d3-4bcc-4a5b-b215-e2cf17f13d7d', CAST(N'2023-05-12T10:37:52.8215856' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), 600, N'Pending', N'Pending', NULL, NULL, NULL, NULL, CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), N'5647896', N'hgvj', N'Surat', N'Gujarat', N'396585', N'teena')
+GO
+INSERT [dbo].[OrderHeaders] ([Id], [ApplicationUserId], [DateOfOrder], [DateOfShipping], [OrderTotal], [OrderStatus], [PaymentStatus], [TrackingNumber], [Carrier], [SessionId], [PaymentIntentId], [DateOfPayment], [DueDate], [Phone], [Address], [City], [State], [PostalCode], [Name]) VALUES (20, N'8c2f19d3-4bcc-4a5b-b215-e2cf17f13d7d', CAST(N'2023-05-12T10:38:57.3216394' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), 600, N'Pending', N'Pending', NULL, NULL, N'cs_test_a1f4js2aVnFoyVG0ieGRIF3LHseXKvB1iXVOWVuUvVvVluVM5jR5PRmmmR', N'cs_test_a1f4js2aVnFoyVG0ieGRIF3LHseXKvB1iXVOWVuUvVvVluVM5jR5PRmmmR', CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), N'5647896', N'hgvj', N'Surat', N'Gujarat', N'396585', N'teena')
+GO
+INSERT [dbo].[OrderHeaders] ([Id], [ApplicationUserId], [DateOfOrder], [DateOfShipping], [OrderTotal], [OrderStatus], [PaymentStatus], [TrackingNumber], [Carrier], [SessionId], [PaymentIntentId], [DateOfPayment], [DueDate], [Phone], [Address], [City], [State], [PostalCode], [Name]) VALUES (21, N'19eb99ac-f72f-46b1-8078-8148dc34f98f', CAST(N'2023-05-12T16:21:28.0021441' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), 400, N'Pending', N'Pending', NULL, NULL, N'cs_test_a1lbTxk6qnTPwU5CDFY2XLmitgouRecLF4I2U70yY6pbtbKGpfNJfHn1Ee', N'cs_test_a1lbTxk6qnTPwU5CDFY2XLmitgouRecLF4I2U70yY6pbtbKGpfNJfHn1Ee', CAST(N'2023-05-12T16:21:31.6142216' AS DateTime2), CAST(N'0001-01-01T00:00:00.0000000' AS DateTime2), N'9854745412', N'XYZZ', N'Surat', N'Gujarat', N'395009', N'Super Admin')
+GO
+SET IDENTITY_INSERT [dbo].[OrderHeaders] OFF
+GO
+SET IDENTITY_INSERT [dbo].[Products] ON 
+GO
+INSERT [dbo].[Products] ([Id], [Name], [Description], [Price], [ImageUrl], [CategoryId]) VALUES (9, N'test', N'testing', 15, N'\ProductImage\70b17be5-5e2b-4a3d-81cf-5bd9c3fd1652-Screenshot (2).png', 10)
+GO
+INSERT [dbo].[Products] ([Id], [Name], [Description], [Price], [ImageUrl], [CategoryId]) VALUES (11, N'capsule', N'tablets', 150, N'\ProductImage\de808126-73c5-4b60-8a7e-e504296e5036-Screenshot (1).png', 6)
+GO
+INSERT [dbo].[Products] ([Id], [Name], [Description], [Price], [ImageUrl], [CategoryId]) VALUES (12, N'testing product', N'efwe', 100, N'\ProductImage\8f0af693-8014-4059-a5a9-8184ab6920da-1.png', 4)
+GO
+SET IDENTITY_INSERT [dbo].[Products] OFF
+GO
+ALTER TABLE [dbo].[AspNetUsers] ADD  DEFAULT (N'') FOR [Discriminator]
+GO
+ALTER TABLE [dbo].[Carts] ADD  DEFAULT (N'') FOR [ApplicationUserId]
+GO
+ALTER TABLE [dbo].[AspNetRoleClaims]  WITH CHECK ADD  CONSTRAINT [FK_AspNetRoleClaims_AspNetRoles_RoleId] FOREIGN KEY([RoleId])
+REFERENCES [dbo].[AspNetRoles] ([Id])
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[AspNetRoleClaims] CHECK CONSTRAINT [FK_AspNetRoleClaims_AspNetRoles_RoleId]
+GO
+ALTER TABLE [dbo].[AspNetUserClaims]  WITH CHECK ADD  CONSTRAINT [FK_AspNetUserClaims_AspNetUsers_UserId] FOREIGN KEY([UserId])
+REFERENCES [dbo].[AspNetUsers] ([Id])
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[AspNetUserClaims] CHECK CONSTRAINT [FK_AspNetUserClaims_AspNetUsers_UserId]
+GO
+ALTER TABLE [dbo].[AspNetUserLogins]  WITH CHECK ADD  CONSTRAINT [FK_AspNetUserLogins_AspNetUsers_UserId] FOREIGN KEY([UserId])
+REFERENCES [dbo].[AspNetUsers] ([Id])
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[AspNetUserLogins] CHECK CONSTRAINT [FK_AspNetUserLogins_AspNetUsers_UserId]
+GO
+ALTER TABLE [dbo].[AspNetUserRoles]  WITH CHECK ADD  CONSTRAINT [FK_AspNetUserRoles_AspNetRoles_RoleId] FOREIGN KEY([RoleId])
+REFERENCES [dbo].[AspNetRoles] ([Id])
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[AspNetUserRoles] CHECK CONSTRAINT [FK_AspNetUserRoles_AspNetRoles_RoleId]
+GO
+ALTER TABLE [dbo].[AspNetUserRoles]  WITH CHECK ADD  CONSTRAINT [FK_AspNetUserRoles_AspNetUsers_UserId] FOREIGN KEY([UserId])
+REFERENCES [dbo].[AspNetUsers] ([Id])
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[AspNetUserRoles] CHECK CONSTRAINT [FK_AspNetUserRoles_AspNetUsers_UserId]
+GO
+ALTER TABLE [dbo].[AspNetUserTokens]  WITH CHECK ADD  CONSTRAINT [FK_AspNetUserTokens_AspNetUsers_UserId] FOREIGN KEY([UserId])
+REFERENCES [dbo].[AspNetUsers] ([Id])
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[AspNetUserTokens] CHECK CONSTRAINT [FK_AspNetUserTokens_AspNetUsers_UserId]
+GO
+ALTER TABLE [dbo].[Carts]  WITH CHECK ADD  CONSTRAINT [FK_Carts_AspNetUsers_ApplicationUserId] FOREIGN KEY([ApplicationUserId])
+REFERENCES [dbo].[AspNetUsers] ([Id])
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[Carts] CHECK CONSTRAINT [FK_Carts_AspNetUsers_ApplicationUserId]
+GO
+ALTER TABLE [dbo].[Carts]  WITH CHECK ADD  CONSTRAINT [FK_Carts_Products_ProductId] FOREIGN KEY([ProductId])
+REFERENCES [dbo].[Products] ([Id])
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[Carts] CHECK CONSTRAINT [FK_Carts_Products_ProductId]
+GO
+ALTER TABLE [dbo].[OrderDetails]  WITH CHECK ADD  CONSTRAINT [FK_OrderDetails_OrderHeaders_OrderHeaderId] FOREIGN KEY([OrderHeaderId])
+REFERENCES [dbo].[OrderHeaders] ([Id])
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[OrderDetails] CHECK CONSTRAINT [FK_OrderDetails_OrderHeaders_OrderHeaderId]
+GO
+ALTER TABLE [dbo].[OrderHeaders]  WITH CHECK ADD  CONSTRAINT [FK_OrderHeaders_AspNetUsers_ApplicationUserId] FOREIGN KEY([ApplicationUserId])
+REFERENCES [dbo].[AspNetUsers] ([Id])
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[OrderHeaders] CHECK CONSTRAINT [FK_OrderHeaders_AspNetUsers_ApplicationUserId]
+GO
+ALTER TABLE [dbo].[Products]  WITH CHECK ADD  CONSTRAINT [FK_Products_Categories_CategoryId] FOREIGN KEY([CategoryId])
+REFERENCES [dbo].[Categories] ([Id])
+ON DELETE CASCADE
+GO
+ALTER TABLE [dbo].[Products] CHECK CONSTRAINT [FK_Products_Categories_CategoryId]
+GO

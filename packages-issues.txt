@@ -1,0 +1,43 @@
+
+
+
+whole application is in core 6 & working good.
+
+
+ASP Login, registration, product , category crud opeartion with proper code structure- in this solution had 4 projects
+
+code first approaches
+
+add-migration 'initial'
+update-database
+
+Database- MyAppWebCore6DB
+
+
+"ConnectionStrings": {
+    "DefaultConnection": "server=ATI-1;database=MyAppWebCore6DB;Integrated Security=True; MultipleActiveResultSets=true; TrustServerCertificate=True;",
+    "ApplicationDbContextConnection": "Server=(localdb)\\mssqllocaldb;Database=MyAppWebCore6;Trusted_Connection=True;MultipleActiveResultSets=true"
+  },
+  "PaymentSettings": {
+    "SecretKey": "sk_test_51N6BrrSAeJGrl3tt2k6NQjxsR8XlHbpxcba7Ctf51q8ZnknvrmSGvMUE0LYv6Vyw7elgOqt180wmRxQ26gRs1k4U00hbqZZKPj",
+    "PublishableKey": "pk_test_51N6BrrSAeJGrl3ttrTQ09wHSBmEktWY2sxFTGQHe82NMdNlbMS1rl9ZtJYDwcn772by63eDpZJgS4klORSHfGKmD00odqYto8O"
+
+  }
+
+
+
+no issues found- 
+
+packages
+
+Microsoft.AspNetCore.Identity.EntityFrameworkCore 6.0.16
+Microsoft.AspNetCore.Identity.UI 6.0.16
+Microsoft.AspNetCore.Mvc.ViewFeatures 2.2.0
+Microsoft.EntityFrameworkCore 7.0.5
+Microsoft.EntityFrameworkCore.Relational 7.0.5
+Microsoft.EntityFrameworkCore.SqlServer 7.0.5
+Microsoft.EntityFrameworkCore.Tools 7.0.5
+Microsoft.VisualStudio.Web.CodeGeneration.Design 6.0.13
+
+
+

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CjU2hGSQU5QVEzOEWaOlgCbgpdGEga07tSNil5RFsXH/1dVfDYjuKy8MDNEGDGg9QVlEFDmEJGAMh6bXPu959Q==",
+  "dgSpecHash": "ZmU8b7zArwsul2HpxFV85TqMrD3vwYFGHpue8TgSlvON5YVkb3wOzjcj3kXKuOq1NsWcyfFrOfY7lW4WsPFr8g==",
   "success": true,
-  "projectFilePath": "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.CommonHelper\\MyAppDotnetCore6.CommonHelper.csproj",
+  "projectFilePath": "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.CommonHelper\\MyAppDotnetCore6.CommonHelper.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ATI-1\\.nuget\\packages\\bouncycastle.cryptography\\2.1.1\\bouncycastle.cryptography.2.1.1.nupkg.sha512",
     "C:\\Users\\ATI-1\\.nuget\\packages\\mailkit\\3.2.0\\mailkit.3.2.0.nupkg.sha512",

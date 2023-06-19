@@ -1164,11 +1164,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.CommonHelper\\MyAppDotnetCore6.CommonHelper.csproj",
+      "projectUniqueName": "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.CommonHelper\\MyAppDotnetCore6.CommonHelper.csproj",
       "projectName": "MyAppDotnetCore6.CommonHelper",
-      "projectPath": "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.CommonHelper\\MyAppDotnetCore6.CommonHelper.csproj",
+      "projectPath": "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.CommonHelper\\MyAppDotnetCore6.CommonHelper.csproj",
       "packagesPath": "C:\\Users\\ATI-1\\.nuget\\packages\\",
-      "outputPath": "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.CommonHelper\\obj\\",
+      "outputPath": "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.CommonHelper\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

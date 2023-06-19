@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lLWraJjUZ0tNylDFELgSzaZDo3L3MJsJxzVfyKBXH+fWdt11Q8a/09JT8GPwrHf4w3xSNxJsRtEKx0WxHcESuQ==",
+  "dgSpecHash": "rk/2IVbIfba7slvV2oEPG1gI4KuD6nh3kuyVWyN4LdybbVdV4ePJdUe0XSzha6J5w/BNWlMHTT/+Hh8pOBA8bQ==",
   "success": true,
-  "projectFilePath": "E:\\dotnetcore\\MyAppDotnetCore6\\MyAppDotnetCore6.Models\\MyAppDotnetCore6.Models.csproj",
+  "projectFilePath": "E:\\dotnetcore\\Git\\MyAppDotnetCore6\\MyAppDotnetCore6.Models\\MyAppDotnetCore6.Models.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ATI-1\\.nuget\\packages\\microsoft.aspnetcore.antiforgery\\2.2.0\\microsoft.aspnetcore.antiforgery.2.2.0.nupkg.sha512",
     "C:\\Users\\ATI-1\\.nuget\\packages\\microsoft.aspnetcore.authentication.abstractions\\2.2.0\\microsoft.aspnetcore.authentication.abstractions.2.2.0.nupkg.sha512",
